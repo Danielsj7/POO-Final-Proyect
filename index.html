@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+	</head>
+	<body>
+		<h1> Inicia sesión</h1>
+		<button id="login"> Sync with Google</button>
+		<br>
+		<form>
+			<input id="urlText" type="text" name="urlText">
+			<button id="ok"> Enviar url</button>
+		</form>
+		<div id="root"></div>
+		<script
+		src="https://code.jquery.com/jquery-3.4.0.min.js"
+		integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
+			crossorigin="anonymous">
+		</script>
+		
+		
+		<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+		<script>
+		// Initialize Firebase
+		var config = {
+		apiKey: "AIzaSyCDUHv4yCo36cJrBZofzjAodjBlJU0BOyk",
+		authDomain: "poo-web-app.firebaseapp.com",
+		databaseURL: "https://poo-web-app.firebaseio.com",
+		projectId: "poo-web-app",
+		storageBucket: "poo-web-app.appspot.com",
+		messagingSenderId: "722782169585"
+		};
+		firebase.initializeApp(config);
+		</script>
+		</script>
+		<script src="App.js"></script>
+	</body>
+</html>
