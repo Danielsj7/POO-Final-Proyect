@@ -1,9 +1,11 @@
 //Login
 var provider = new firebase.auth.GoogleAuthProvider();
-
+//Cojo la referencia en de mi rama en la base de datos
 var databaseRef = firebase.database().ref();
 
+//La notación $('#elemento') me "trae" el botón para que pueda trabajar con el en JS, esto lo hago gracias a JQuery
 $('#login').click(function(){
+	//Cuando se le hace click al botón de login 
   firebase.auth().signInWithPopup(provider)
     .then(function(result) {
     	var user = {
@@ -12,6 +14,7 @@ $('#login').click(function(){
     		email:result.user.email,
     	}
     	console.log(result);
+	  //Cojo los datos que me interesan y los mando a la base de Datos
     	guardarUser(user);
 
   });
