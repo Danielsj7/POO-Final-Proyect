@@ -4,12 +4,19 @@
 		<title></title>
 	</head>
 	<body>
-		<h1> Inicia sesión</h1>
+		<h1 id= "state"> No se encuentra logeado</h1>
 		<button id="login"> Sync with Google</button>
 		<br>
+		<button id="logout"> LogOut</button>
+		<br>
 		<form>
-			<input id="urlText" type="text" name="urlText">
-			<button id="ok"> Enviar url</button>
+			<p>Url<p>
+			<input style="width:500px;" id="urlText" type="text" name="urlText">
+			<br>
+			<p>Precio Deseado COP$<p>
+			<input id="precioText" type="number" name="urlText" min="0">
+			<br>
+			<button id="ok"> Enviar información</button>
 		</form>
 		<div id="root"></div>
 		<script
@@ -17,8 +24,8 @@
 		integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg="
 			crossorigin="anonymous">
 		</script>
-		
-		
+
+
 		<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
 		<script>
 		// Initialize Firebase
@@ -33,6 +40,6 @@
 		firebase.initializeApp(config);
 		</script>
 		</script>
-		<script src="App.js"></script>
+		<script src="APPJS.js"></script>
 	</body>
 </html>
