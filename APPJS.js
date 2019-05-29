@@ -1,5 +1,4 @@
 //Login
-alert("CONECTADOOOO");
 var provider = new firebase.auth.GoogleAuthProvider();
 var databaseRef = firebase.database().ref();
 
@@ -49,13 +48,12 @@ function guardarUser(user){
 
 function mandarInfo(){
 	let user_id = firebase.auth().currentUser.uid;
-  alert(user_id);
 	let urlText = $('#urlText').val();
   let precioText = $('#precioText').val();
 	if (urlText != "" && precioText != "") {
     var newPostKey = databaseRef.child('urls').push().key;
   	firebase.database().ref('users/' + user_id +'/urls')
-  	.push({url: urlText, price: precioText})
+  	.set({url: urlText, price: precioText})
   	.then(s =>{
   		console.log("envié");
   	});
